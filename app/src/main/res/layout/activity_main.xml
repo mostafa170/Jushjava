@@ -1,0 +1,124 @@
+<?xml version="2.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mostafa.jushjava.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <EditText
+            android:id="@+id/enter_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:inputType="textMultiLine" />
+
+        <TextView
+            android:id="@+id/TOPPINGS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/enter_name"
+            android:layout_marginBottom="16dp"
+            android:text="TOPPINGS"
+            android:textAllCaps="true" />
+
+        <CheckBox
+            android:id="@+id/Whipped_cream_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TOPPINGS"
+            android:paddingLeft="24dp"
+            android:text="Whipped cream"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:id="@+id/Whipped_chocolate_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Whipped_cream_checkBox"
+            android:paddingLeft="24dp"
+            android:text="Whipped cream"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/QUANTITY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Whipped_chocolate_checkBox"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:text="QUANTITY"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/plus"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/QUANTITY"
+            android:layout_toRightOf="@+id/zero"
+            android:onClick="increment"
+            android:text="+"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/zero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/QUANTITY"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@+id/mains"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/mains"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/QUANTITY"
+            android:layout_marginBottom="16dp"
+            android:onClick="decrement"
+            android:text="-"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/PRICE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mains"
+            android:text="ORDER SummARy"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/order_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/PRICE"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:text="$0"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+        />
+
+        <Button
+            android:id="@+id/ORDER"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/order_text_view"
+            android:onClick="submitOrder"
+            android:text="ORDER"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </RelativeLayout>
+</ScrollView>
